@@ -1,0 +1,28 @@
+net: "/home/gosuncn/Danbin_work/Work/caffe_test/mobilenet_v2_crop/train_landmark_conv_depwise.prototxt"
+
+type: "Adam"
+
+#test_iter: 100
+#test_interval: 500
+#test_initialization: false
+
+base_lr: 0.0001
+#iter_size: 8
+
+lr_policy: "multistep"
+stepvalue: 50000
+stepvalue: 100000
+stepvalue: 200000
+
+gamma: 0.1
+#stepsize: 2000
+
+display: 1000
+max_iter: 500000
+
+momentum: 0.9
+weight_decay: 0.0004  #0.00005
+
+snapshot: 1000  # 1000
+snapshot_prefix: "/home/gosuncn/Danbin_work/Work/caffe_test/mobilenet_v2_crop/model/face_68landmarks"
+solver_mode: GPU
